@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/','studentController@index');
+Route::get('/start','studentController@index');
 Route::post('/store','studentController@store')->name('store');
 Route::get('/delete','studentController@destroy')->name('delete');
 Route::post('/update','studentController@update')->name('update');
 Route::get('/show','studentController@show')->name('show');
+
+Route::get('/',function(){
+return view('index');
+});
